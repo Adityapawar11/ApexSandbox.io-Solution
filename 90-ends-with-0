@@ -1,0 +1,8 @@
+public Boolean isEndWithZero(Integer num){
+     //code here
+     Integer reminder ;
+     for(Integer i = 0; i< num.getLength();i++){
+         reminder /=10;
+     }
+     return reminder == 0 ? true : false;
+}
