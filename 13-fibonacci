@@ -4,18 +4,18 @@ public Integer fibonacci(Integer n) {
     Integer previous = 1;
     Integer beforePrevious = 1 ;
     Integer count = 0;
-    if( n == 1) {
+        if( n == 1) {
             return previous ;
             
         }else if( n == 2){
             return previous;
-    else {while(count != n-2){
-        current = previous + beforePrevious;
+        }else {while(count != n-2){
+            current = previous + beforePrevious;
             beforePrevious = previous;
             previous = current ;
             count++;
+            }
         }
-    }
         
     }
     return current;
