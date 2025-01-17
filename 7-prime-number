@@ -1,8 +1,8 @@
 public Boolean isPrime(Integer num) {
     //code here
-    for(Integer i = 1 ; i < num/2 ; i++ ){
+    for(Integer i = 1 ; i < num ; i++ ){
         if(Math.mod(num , i) == 0){
-            if(i == 1){
+            if(i == 1 || i == num){
                 return true;
             }
         }
