@@ -1,10 +1,10 @@
 public String formatName(String firstName, String lastName) {
     //code here
-    if(IsBlank(firstName) == true && IsBlank(lastName) == true){
+    if(String.IsBlank(firstName) == true && String.IsBlank(lastName) == true){
         return '';
-    }else if(IsBlank(firstName) == true && IsBlank(lastName) == false){
+    }else if(String.IsBlank(firstName) == true && String.IsBlank(lastName) == false){
         return lastName;
-    }else if(IsBlank(firstName) == false && IsBlank(lastName) == true){
+    }else if(String.IsBlank(firstName) == false && String.IsBlank(lastName) == true){
         return firstName;
     }else {
         return lastName + ', '+ firstName;
