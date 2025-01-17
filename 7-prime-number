@@ -4,7 +4,7 @@ public Boolean isPrime(Integer num) {
         if(Math.mod(num , i) == 0){
             if(i == 1){
                 return true;
-            }else return false;
+            }
         }
-    }
+    }return false;
 }
