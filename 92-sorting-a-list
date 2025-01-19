@@ -1,0 +1,13 @@
+public List<String> getNamesInAscOrder(List<String> accountNames)
+{
+    //code here
+    Set<String> acc = new Set<String>();
+    List<String> sortedList = new List<String>();
+    for(String acct : accountNames){
+        acc.add(acct);
+    }
+    for(String accts : sortedList){
+        sortedList.add(accts);
+    }
+    return sortedList;
+}
