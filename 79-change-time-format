@@ -1,17 +1,20 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    Integer hours = Integer.valueOf(strTime.subStringBefore(':'));
-    String Result ;
-    if(hours == 12){
-        result = '12:' + strTime.subStringAfter(':') + ' PM';
-        return result;
+    Integer n = Integer.valueOf(strTime.substring(0,strTime.indexOf(':')));
 
-    }else if(hours > 12){
-        result = String.valueOf(hours - 12) + ':' +strTime.subStringAfter(':') +' PM';
-        return result;
+        String result = '';
 
-    }else
-        result = strTime + ' AM';
-        return result;
     
+
+        if ( n < 12 ) result = n == 0 ? 
+
+            strTime.replace('00:', '12:') + ' AM' : strTime + ' AM';
+
+        else result = n == 12 ? 
+
+            strTime + ' PM' : String.valueOf(n-12).leftPad(2, '0') + strTime.substring(strTime.indexOf(':')) + ' PM';
+
+        
+
+        return result;
 }
