@@ -1,6 +1,6 @@
 public String changeTimeFormat(String strTime) {
     //code here
-    Integer hours = IntegerValueOf(strTime.subStringBefore(':'));
+    Integer hours = Integer.valueOf(strTime.subStringBefore(':'));
     String Result ;
     if(hours == 12){
         result = '00:' + strTime.subStringAfter(':') + ' AM';
