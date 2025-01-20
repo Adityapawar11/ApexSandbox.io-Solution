@@ -3,5 +3,6 @@ public String nameFromEmail(String email) {
     //code here
     String Result  ;
     Result = email.subStringBefore('.') + ' ' +(email.subStringBetween('.','@'));
-    return Result.capitalize();
+    Result = Result.capitalize();
+    return Result;
 }
