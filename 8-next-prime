@@ -1,21 +1,50 @@
 public Integer nextPrime(Integer num) {
     //code here
-   if(num < 2) {
-       return 2;
-   }
-   Boolean isPrime  = true;
-   num ++;
-   while(true){
-   for(Integer i = 2; i < Math.sqrt(num); i++){
-        if(Math.mod(num,i) == 0){
-            isPrime = false;
-            break;
+   if (num < 2) {
+
+        return 2;
+
+    }
+
+    // Increment num to start checking for the next prime number
+
+    num++;
+
+    // Continue looping until a prime number is found
+
+    while (true) {
+
+        // Assume num is prime
+
+        Boolean isPrime = true;
+
+        // Check if num is divisible by any number from 2 to num-1
+
+        for (Integer i = 2; i <= Math.sqrt(num); i++) {
+
+            if (num % i == 0) { // If num is divisible by i, it's not prime
+
+                isPrime = false;
+
+                break; // No need to continue checking
+
+            }
+
         }
+
+        if (isPrime) {
+
+            // If num is prime, return it
+
+            return num;
+
+        } else {
+
+            // If num is not prime, increment num and continue the loop
+
+            num++;
+
+        }
+
     }
-    if(isPrime){
-        return num;
-    }else{
-        num++;
-    }
-   }
  }
