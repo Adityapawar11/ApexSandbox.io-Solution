@@ -22,7 +22,7 @@ public Integer nextPrime(Integer num) {
 
         for (Integer i = 2; i <= Math.sqrt(num); i++) {
 
-            if (num % i == 0) { // If num is divisible by i, it's not prime
+            if (Math.mod(num,i) == 0) { // If num is divisible by i, it's not prime
 
                 isPrime = false;
 
