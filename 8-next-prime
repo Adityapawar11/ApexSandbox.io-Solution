@@ -2,11 +2,7 @@ public Integer nextPrime(Integer num) {
     //code here
     Boolean isItPrime = true;
     Integer prime = isPrime(num );
-    if(prime == 0){
-        isPrime(num++);
-    }
-    else 
-        return prime;
+    prime != 0 ? return prime : isPrime(num+=1);
     
     
 }
