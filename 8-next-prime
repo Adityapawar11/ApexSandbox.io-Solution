@@ -1,16 +1,20 @@
 public Integer nextPrime(Integer num) {
     //code here
-    Boolean isItPrime = true;
-    Integer prime = isPrime(num );
-    prime != 1 ? return prime : isPrime(num+=1);
     
-    
+   if(isPrime(num++) == true){
+       return num++;
+   }
 }
-public Integer isPrime(Integer n){
-    for(Integer i = 2 ; i < n-1 ; i++){
-        if(Math.mod(n,i) != 0){
-            return n;
-        }
-        return 1;
-    }
-}
+ public Boolean isPrime(Integer n){
+     if( n <= 1){
+         return false ;
+     }
+     else{
+         for(Integer i = 2 ; i < n-1 ; i++){
+             if(Math.mod(n,i) == 0){
+                 return false;
+             }
+             else true;
+         }
+     }
+ }
