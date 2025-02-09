@@ -2,7 +2,7 @@ public Integer nextPrime(Integer num) {
     //code here
     Boolean isItPrime = true;
     Integer prime = isPrime(num );
-    prime != 0 ? return prime : isPrime(num+=1);
+    prime != 1 ? return prime : isPrime(num+=1);
     
     
 }
@@ -11,6 +11,6 @@ public Integer isPrime(Integer n){
         if(Math.mod(n,i) != 0){
             return n;
         }
-        return 0;
+        return 1;
     }
 }
