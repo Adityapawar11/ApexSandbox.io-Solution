@@ -6,6 +6,7 @@ public Id insertCourse(String name, String details, Integer credits) {
         apx.apxio__Course_Details__c = details;
         apx.apxio__Credits__c = String.valueof(credits);
         insert apx;
+        return apx.Id;
     }
-    return apx.Id;
+    return null;
 }
