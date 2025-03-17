@@ -5,5 +5,11 @@ public String registerStudent(String name, String phone, String email) {
     apx.apxio__Email__c = email;
     apx.Name = name;
     insert apx;
-    return [Select apxio__Registration_Number__c from apxio__Student__c where Id = apx.Id] ;
+    List<apxio__Student__c> student = [Select apxio__Registration_Number__c from apxio__Student__c] ;
+    for(apxio__Student__c stud : student ){
+        if(stud.Id == apx.Id){
+            return stud.apxio__Registration_Number__c
+        }
+    }
+    return null;
 }
