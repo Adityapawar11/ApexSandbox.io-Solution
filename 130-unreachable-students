@@ -1,4 +1,4 @@
 public List<apxio__Student__c> selectUnreachableStudents() {
     // code 
-    return [Select Id ,Name from apxio__Student__c where email == '' AND phone == ''];
+    return [Select Id ,Name from apxio__Student__c where email == null AND phone == null];
 }
